@@ -48,6 +48,6 @@ Estateology is a modern, responsive real estate website designed to showcase hig
 
 ## About the Developer
 
-[Dr RidwanOladipo] is a passionate developer with a keen eye for design and a commitment to creating responsive, user-friendly web applications. This project showcases my ability to translate design concepts into fully functional websites using modern web technologies.
+Dr Ridwan Oladipo is a passionate developer with a keen eye for design and a commitment to creating responsive, user-friendly web applications. This project showcases my ability to translate design concepts into fully functional websites using modern web technologies.
 
-For more information or to discuss potential opportunities, please contact me at [dr.ridwan.oladipo@gmail.com] or connect with me on LinkedIn.
+For more information or to discuss potential opportunities, please contact me at [dr.ridwan.oladipo@gmail.com](gmail.com) or connect with me on LinkedIn.
