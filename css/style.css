@@ -91,13 +91,18 @@ body {
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative; }
   @media only screen and (max-width: 62.5em) {
     .sidebar {
       grid-column: 1 / -1;
       grid-row: 1 / 2;
-      justify-content: flex-end;
-      align-items: center; } }
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem; } }
 
 .nav-btn {
   border: none;
@@ -105,25 +110,70 @@ body {
   background-color: #fff;
   height: 2px;
   width: 4.5rem;
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  position: relative;
+  cursor: pointer; }
   .nav-btn::before, .nav-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
     background-color: #fff;
     height: 2px;
     width: 4.5rem;
-    content: "";
-    display: block; }
+    transition: all 0.2s; }
   .nav-btn::before {
-    transform: translateY(-1.5rem); }
+    top: -1.5rem; }
   .nav-btn::after {
-    transform: translateY(1.3rem); }
+    top: 1.3rem; }
   @media only screen and (max-width: 62.5em) {
     .nav-btn {
       margin-top: 0;
       margin-right: 3rem; }
       .nav-btn::before {
-        transform: translateY(-1.2rem); }
+        top: -1.2rem; }
       .nav-btn::after {
-        transform: translateY(1rem); } }
+        top: 1rem; } }
+  .nav-btn.active {
+    background-color: transparent; }
+    .nav-btn.active::before {
+      top: 0;
+      transform: rotate(135deg); }
+    .nav-btn.active::after {
+      top: 0;
+      transform: rotate(-135deg); }
+
+.nav-menu {
+  display: none;
+  margin-top: 4rem; }
+  .nav-menu.active {
+    display: block; }
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .nav-menu li {
+    margin-bottom: 2rem; }
+  .nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.2s; }
+    .nav-menu a:hover {
+      color: #101d2c; }
+  @media only screen and (max-width: 62.5em) {
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #c69963;
+      padding: 2rem;
+      z-index: 1000; }
+      .nav-menu ul {
+        display: flex;
+        justify-content: space-around; }
+      .nav-menu li {
+        margin-bottom: 0; } }
 
 .header {
   background-color: #54483a;
